@@ -155,24 +155,24 @@ function App() {
       }
     ]
 
-    // testList 배열에서 각 타입의 선택된 횟수를 가져옵니다.
+    // testList 배열에서 각 타입의 선택된 횟수 가져오기
     const typeCounts = testList.map(data => data.count);
 
-    // 가장 많이 선택된 횟수를 찾습니다.
+    // 가장 많이 선택된 횟수 찾기
     const maxCount = Math.max(...typeCounts);
 
-    // 가장 많이 선택된 타입을 찾아냅니다.
+    // 가장 많이 선택된 타입 찾기
     const mostSelectedType = testList.find(data => data.count === maxCount);
 
-    // 가장 많이 선택된 타입에 대응하는 결과를 찾습니다.
+    // 가장 많이 선택된 타입에 대응하는 결과
     const resultInfo = il.find(info => info.name.includes(mostSelectedType.name));
 
-    // 결과를 출력합니다.
+    // 결과 출력
     console.log('가장 많이 선택된 타입:', mostSelectedType.name);
     console.log('선택된 횟수:', maxCount);
     console.log('결과 정보:', resultInfo);
 
-    // result 변수에 결과를 저장하고 필요한 곳에서 사용할 수 있습니다.
+    // result 변수
     let result = resultInfo;
 
     // setnamedesc(resultInfo);
