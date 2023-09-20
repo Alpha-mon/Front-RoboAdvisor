@@ -4,23 +4,16 @@ import Header from './components/Main/Header';
 import TopMenu from './components/Main/TopMenu';
 import BottomMenu from './components/Main/BottomMenu';
 import styled from 'styled-components';
-import Router from '../src/pages/Router';
+import Router from './Router';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
+
   return(
   <>
     <Container>
-      <Header></Header>
-      <TopMenu></TopMenu>
-      <Mainservice></Mainservice>
-      <Test>
-        <Testimage src="/images/edit.png" alt="테스트"></Testimage>
-        <TextContainer>
-          <Testtext>투자 성향 테스트</Testtext>
-          <Testexplain>나는 어떤 투자 성향을 가지고 있을까?</Testexplain>
-        </TextContainer>
-      </Test>
-      <BottomMenu></BottomMenu>
+      <div onClick={()=>navigate('/main')}>메인화면</div>
     </Container>
   </>
   );
